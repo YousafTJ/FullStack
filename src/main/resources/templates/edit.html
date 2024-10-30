@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Album</title>
+  <link rel="stylesheet" th:href="@{edit.css}">
+</head>
+<body>
+<h1>Edit album</h1>
+
+<form th:action="@{/update}" method="post">
+  <input type="hidden" name="original_artist" th:value="${album.artist}">
+  <input type="hidden" name="original_album_title" th:value="${album.album_title}">
+
+  <label>Artist:</label>
+  <input type="text" name="artist" th:value="${album.artist}" placeholder="Artist">
+
+  <label>Album Title:</label>
+  <input type="text" name="album_title" th:value="${album.album_title}" placeholder="Album Title">
+
+  <label>Track:</label>
+  <input type="text" name="track" th:value="${album.track}" placeholder="Track Name">
+
+  <label>Track Duration:</label>
+  <input type="text" name="track_duration" th:value="${album.track_duration}" placeholder="Track Duration">
+
+  <label>Release Year:</label>
+  <input type="text" name="release_year" th:value="${album.release_year}" placeholder="Release Year">
+
+  <label>Record Company:</label>
+  <input type="text" name="record_company" th:value="${album.record_company}" placeholder="Record Company">
+
+  <button type="submit" class="save-button">Save Changes</button>
+</form>
+
+
+</body>
+</html>

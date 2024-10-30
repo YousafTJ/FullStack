@@ -1,0 +1,98 @@
+body{
+    background-image: url("https://img.freepik.com/free-photo/abstract-geometric-background-shapes-texture_1194-305438.jpg?ga=GA1.1.519555005.1729767876&semt=ais_hybrid");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0; /* Ensures no extra margin around the body */
+    overflow: hidden; /* Optional: removes scrollbars if content exceeds viewport */
+    padding-left: 50px;
+}
+
+table{
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 80%;
+    height: 500px;
+}
+
+h1{
+    color: ghostwhite;
+    font-weight: bolder;
+
+}
+
+
+td, th{
+    color: ghostwhite;
+    font-weight: bold;
+    font-family: inherit;
+    border: 3px solid white;
+    box-shadow: 0 0 8px rgba(236, 224, 147, 1), /* Bright glow */
+    0 0 12px rgba(236, 224, 147, 0.8);
+}
+
+tr:hover td, tr:hover th {
+    text-shadow: 0 0 8px rgba(236, 224, 147, 1), 0 0 12px rgba(236, 224, 147, 0.8);
+    transition: text-shadow 0.3s ease-in-out; /* Smooth transition for the glow */
+}
+
+.create-button{
+    border: 3px solid white;
+    box-shadow: 0 0 8px rgba(236, 224, 147, 1), /* Bright glow */
+    0 0 12px rgba(236, 224, 147, 0.8);
+    font-size: 15px;
+    background-color: black;
+    color: ghostwhite;
+    width: 80px;
+    height: 50px;
+    margin-bottom: 20px;
+    transition: text-shadow 0.3s ease-in-out;
+}
+.create-button:hover{
+    text-shadow: 0 0 8px rgba(236, 224, 147, 1), 0 0 12px rgba(236, 224, 147, 0.8);
+}
+
+.delete-button{
+    background-color: transparent;
+    color: ghostwhite;
+    font-weight: bolder;
+    transition: text-shadow 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(241, 13, 13, 1);
+}
+
+.delete-button:hover{
+    text-shadow: 0 0 8px rgba(236, 224, 147, 1), 0 0 12px rgba(236, 224, 147, 0.8);
+}
+
+
+.view-button{
+    background-color: transparent;
+    color: ghostwhite;
+    font-weight: bolder;
+    transition: text-shadow 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(6, 37, 195, 1);
+}
+
+.view-button:hover{
+    text-shadow: 0 0 8px rgba(236, 224, 147, 1), 0 0 12px rgba(236, 224, 147, 0.8);
+}
+
+.functions {
+    display: flex;
+    gap: 10px; /* Adds spacing between the buttons */
+    align-items: center; /* Centers buttons vertically */
+    height: 100%;
+}
+
+.edit-button{
+    background-color: transparent;
+    color: ghostwhite;
+    font-weight: bolder;
+    transition: text-shadow 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(89, 241, 13, 1);
+}
+
+.edit-button:hover{
+    text-shadow: 0 0 8px rgba(236, 224, 147, 1), 0 0 12px rgba(236, 224, 147, 0.8);
+}

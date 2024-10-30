@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{view.css}">
+    <title>View album</title>
+</head>
+<body>
+<h1>Album</h1>
+
+
+<div class="view-box">
+    <p><strong>Artist:</strong> <span th:text="${album.artist}"></span></p>
+    <p><strong>Album Title:</strong> <span th:text="${album.album_title}"></span></p>
+    <p><strong>Track:</strong> <span th:text="${album.track}"></span></p>
+    <p><strong>Track Duration:</strong> <span th:text="${album.track_duration}"></span></p>
+    <p><strong>Release Year:</strong> <span th:text="${album.release_year}"></span></p>
+    <p><strong>Record Company:</strong> <span th:text="${album.record_company}"></span></p>
+</div>
+
+<a href="/">Back to Albums List</a>
+
+</body>
+</html>

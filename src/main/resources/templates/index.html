@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Albums</title>
+  <link rel="stylesheet" th:href="@{MyCSS.css}">
+</head>
+<body>
+
+<h1>List of albums</h1>
+
+<a href="/create">
+  <button class="create-button">Add album</button>
+</a>
+
+<table>
+  <thead>
+  <tr>
+    <th>Artist</th>
+    <th>Album title</th>
+    <th>Track</th>
+    <th>Track duration</th>
+    <th>Release year</th>
+    <th>Record company</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="album: ${albums}">
+
+    <td th:text="${album.artist}"></td>
+    <td th:text="${album.album_title}"></td>
+    <td th:text="${album.track}"></td>
+    <td th:text="${album.track_duration}"></td>
+    <td th:text="${album.release_year}"></td>
+    <td th:text="${album.record_company}"></td>
+
+    <td class="functions">
+      <!-- View Button with POST Form -->
+      <form th:action="@{/view}" method="post">
+        <input type="hidden" name="artist" th:value="${album.artist}">
+        <input type="hidden" name="album_title" th:value="${album.album_title}">
+        <input type="hidden" name="track" th:value="${album.track}">
+        <input type="hidden" name="track_duration" th:value="${album.track_duration}">
+        <input type="hidden" name="release_year" th:value="${album.release_year}">
+        <input type="hidden" name="record_company" th:value="${album.record_company}">
+        <button type="submit" class="view-button">View</button>
+      </form>
+
+      <form th:action="@{/delete}" method="post">
+        <input type="hidden" name="artist" th:value="${album.artist}">
+        <input type="hidden" name="album_title" th:value="${album.album_title}">
+        <button type="submit" class="delete-button">Delete</button>
+      </form>
+
+      <form th:action="@{/edit}" method="post" style="display: inline;">
+        <input type="hidden" name="artist" th:value="${album.artist}">
+        <input type="hidden" name="album_title" th:value="${album.album_title}">
+        <input type="hidden" name="track" th:value="${album.track}">
+        <input type="hidden" name="track_duration" th:value="${album.track_duration}">
+        <input type="hidden" name="release_year" th:value="${album.release_year}">
+        <input type="hidden" name="record_company" th:value="${album.record_company}">
+        <button type="submit" class="edit-button">Edit</button>
+      </form>
+
+
+    </td>
+
+
+  </tr>
+  </tbody>
+
+
+</table>
+
+
+</body>
+</html>

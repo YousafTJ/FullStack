@@ -1,0 +1,50 @@
+body{
+    background-image: url("https://img.freepik.com/free-photo/technology-particle-dots-digital-corporate-black-wallpaper_53876-104059.jpg?ga=GA1.1.519555005.1729767876&semt=ais_hybrid");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0; /* Ensures no extra margin around the body */
+    overflow: hidden; /* Optional: removes scrollbars if content exceeds viewport */
+    margin-left: 20px;
+}
+
+
+h1{
+    color: ghostwhite;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Adjust width as needed */
+    margin: 0; /* Aligns form to the left */
+     /* Adds a bit of space from the left edge */
+}
+
+form input[type="text"]{
+    margin-bottom: 10px; /* Adds spacing between each input */
+    padding: 8px; /* Adds padding for better spacing inside inputs */
+    font-size: 1em;
+    box-shadow: 0px 0px 8px rgba(236, 224, 147, 1),
+    0px 0px 12px rgb rgba(236, 224, 147, 0.8);
+    border-radius: 3px;
+}
+
+form input[type="submit"]{
+    background-color: black;
+    color: wheat;
+    box-shadow: 0px 0px 8px rgba(236, 224, 147, 1),
+    0px 0px 12px rgb rgba(236, 224, 147, 0.8);
+    border: 1px solid wheat;
+    border-radius: 5px;
+    transition: text-shadow 0.3s ease-in-out;
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+}
+
+form input[type="submit"]:hover {
+    text-shadow: 0 0 8px rgba(236, 224, 147, 1), 0 0 12px rgba(236, 224, 147, 0.8);
+}
